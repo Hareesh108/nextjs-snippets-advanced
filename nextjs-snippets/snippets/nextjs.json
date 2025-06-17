@@ -1,0 +1,60 @@
+{
+    "Client Component": {
+        "prefix": "next-client",
+        "body": [
+            "'use client';",
+            "",
+            "import React from 'react';",
+            "",
+            "export default function $1() {",
+            "  return (",
+            "    <div>",
+            "      $2",
+            "    </div>",
+            "  );",
+            "}"
+        ],
+        "description": "Next.js 15 Client Component"
+    },
+    "Server Component": {
+        "prefix": "next-server",
+        "body": [
+            "import React from 'react';",
+            "",
+            "export default async function $1() {",
+            "  return (",
+            "    <div>",
+            "      $2",
+            "    </div>",
+            "  );",
+            "}"
+        ],
+        "description": "Next.js 15 Server Component"
+    },
+    "Server Action": {
+        "prefix": "serveraction",
+        "body": [
+            "'use server';",
+            "",
+            "export async function $1(formData) {",
+            "  // your logic here",
+            "}"
+        ],
+        "description": "Server Action (Next.js 15)"
+    },
+    "Generate Page File": {
+        "prefix": "pagegen",
+        "body": [
+            "import React from 'react';",
+            "",
+            "export default function Page() {",
+            "  return (",
+            "    <div>",
+            "      $1",
+            "    </div>",
+            "  );",
+            "}"
+        ],
+        "description": "Next.js Page File"
+    }
+}

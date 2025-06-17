@@ -1,0 +1,49 @@
+{
+  "name": "nextjs-snippets",
+  "displayName": "Next.js 15 Snippets",
+  "description": "Snippets for Next.js 15 apps with App Router, Server Actions, and more.",
+  "version": "0.0.1",
+  "publisher": "HareeshBhittam",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "nextjs",
+    "next",
+    "next.js",
+    "nextjs15",
+    "app router",
+    "react",
+    "typescript",
+    "javascript",
+    "server actions",
+    "server components",
+    "client components",
+    "vscode snippets"
+  ],
+  "icon": "images/logo.png",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascriptreact",
+        "path": "./nextjs-snippets/nextjs.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./nextjs-snippets/nextjs.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hareesh108/nextjs15-snippets.git"
+  },
+  "recommendations": [
+    "dsznajder.es7-react-js-snippets",
+    "bradlc.vscode-tailwindcss"
+  ]
+}
