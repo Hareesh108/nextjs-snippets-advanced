@@ -1,6 +1,6 @@
 {
-  "name": "nextjs-snippets",
-  "displayName": "Next.js 15 Snippets",
+  "name": "next-js-snippets-latest",
+  "displayName": "Nextjs Snippets Advanced",
   "description": "Snippets for Next.js 15 apps with App Router, Server Actions, and more.",
   "version": "0.0.1",
   "publisher": "HareeshBhittam",
@@ -25,7 +25,7 @@
     "client components",
     "vscode snippets"
   ],
-  "icon": "images/logo.png",
+  "icon": "images/logo.jpeg",
   "contributes": {
     "snippets": [
       {
