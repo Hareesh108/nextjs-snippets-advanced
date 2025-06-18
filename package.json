@@ -2,7 +2,7 @@
   "name": "next-js-snippets-latest",
   "displayName": "Nextjs Snippets Advanced",
   "description": "Snippets for Next.js 15 apps with App Router, Server Actions, and more.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "HareeshBhittam",
   "license": "MIT",
   "engines": {
@@ -30,11 +30,11 @@
     "snippets": [
       {
         "language": "javascriptreact",
-        "path": "./nextjs-snippets/nextjs.json"
+        "path": "./snippets/nextjs.json"
       },
       {
         "language": "typescriptreact",
-        "path": "./nextjs-snippets/nextjs.json"
+        "path": "./snippets/nextjs.json"
       }
     ]
   },
