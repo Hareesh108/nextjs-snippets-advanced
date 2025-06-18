@@ -6,12 +6,22 @@ Boost your productivity building **Next.js 15** apps with ready-to-use **App Rou
 
 ## 💡 Snippet List
 
-| Prefix         | Description                          |
-|----------------|--------------------------------------|
-| `next-client`  | Create a Client Component (`'use client'`) |
-| `next-server`  | Create a Server Component            |
-| `serveraction` | Create a Server Action Handler       |
-| `pagegen`      | Generate a basic `page.tsx` file     |
+| Prefix                | Description                                                             |
+|------------------------|-------------------------------------------------------------------------|
+| `next-client`         | Create a Client Component (`'use client'`)                              |
+| `next-server`         | Create a Server Component                                               |
+| `next-action`         | Create a Server Action Handler (`'use server'`)                         |
+| `next-page`           | Create a basic `page.tsx` component                                     |
+| `next-loading`        | Create a `loading.tsx` fallback component                               |
+| `next-error`          | Create an `error.tsx` client-side error handler                         |
+| `next-handler`        | Create a Route Handler for API routes (`GET`, `POST`)                   |
+| `next-middleware`     | Create middleware with route matcher config                             |
+| `next-router`         | Use `useRouter()` for client-side navigation                            |
+| `next-pathname`       | Use `usePathname()` to get current route                                |
+| `next-searchparams`   | Use `useSearchParams()` to read query params                            |
+| `next-params`         | Use `useParams()` to read dynamic route params                          |
+| `next-layoutsegments` | Use `useSelectedLayoutSegments()` for layout nesting segments           |
+| `next-layoutsegment`  | Use `useSelectedLayoutSegment()` to get a specific layout segment       |
 
 ---
 
