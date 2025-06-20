@@ -2,7 +2,7 @@
   "name": "next-js-snippets-latest",
   "displayName": "Nextjs Snippets Advanced",
   "description": "Snippets for Next.js 15 apps with App Router, Server Actions, and more.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "HareeshBhittam",
   "license": "MIT",
   "engines": {
@@ -40,10 +40,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Hareesh108/nextjs15-snippets.git"
+    "url": "https://github.com/Hareesh108/nextjs-snippets"
   },
   "recommendations": [
-    "dsznajder.es7-react-js-snippets",
-    "bradlc.vscode-tailwindcss"
+    "HareeshBhittam.reactcraft-snippets"
   ]
 }
