@@ -121,10 +121,6 @@
     "next-userouter": {
         "prefix": "next-router",
         "body": [
-            "'use client';",
-            "",
-            "import { useRouter } from 'next/navigation';",
-            "",
             "const router = useRouter();",
             "// router.push('/dashboard');"
         ],
@@ -133,10 +129,6 @@
     "next-usepathname": {
         "prefix": "next-pathname",
         "body": [
-            "'use client';",
-            "",
-            "import { usePathname } from 'next/navigation';",
-            "",
             "const pathname = usePathname();",
             "// console.log(pathname);"
         ],
@@ -145,10 +137,6 @@
     "next-usesearchparams": {
         "prefix": "next-searchparams",
         "body": [
-            "'use client';",
-            "",
-            "import { useSearchParams } from 'next/navigation';",
-            "",
             "const searchParams = useSearchParams();",
             "const value = searchParams.get('$1');"
         ],
@@ -157,10 +145,6 @@
     "next-useparams": {
         "prefix": "next-params",
         "body": [
-            "'use client';",
-            "",
-            "import { useParams } from 'next/navigation';",
-            "",
             "const params = useParams();",
             "// console.log(params);"
         ],
@@ -169,10 +153,6 @@
     "next-uselayoutsegments": {
         "prefix": "next-layoutsegments",
         "body": [
-            "'use client';",
-            "",
-            "import { useSelectedLayoutSegments } from 'next/navigation';",
-            "",
             "const segments = useSelectedLayoutSegments();",
             "// console.log(segments);"
         ],
@@ -181,10 +161,6 @@
     "next-uselayoutsegment": {
         "prefix": "next-layoutsegment",
         "body": [
-            "'use client';",
-            "",
-            "import { useSelectedLayoutSegment } from 'next/navigation';",
-            "",
             "const segment = useSelectedLayoutSegment();",
             "// console.log(segment);"
         ],

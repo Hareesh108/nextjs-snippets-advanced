@@ -1,4 +1,4 @@
-# ⚡ Next.js 15 Snippets
+# ⚡ New Next.js 15 Snippets
 
 Supercharge your productivity when building **Next.js 15** apps using these clean, modern code snippets for **App Router**, **Client & Server Components**, **Server Actions**, **API Handlers**, and more.
 
@@ -6,7 +6,7 @@ Supercharge your productivity when building **Next.js 15** apps using these clea
 
 ## 📸 Demo
 
-<!-- ![Demo GIF](images/demo.gif) -->
+![Demo GIF](images/nextjs-snippets-demo.gif)
 
 ---
 
