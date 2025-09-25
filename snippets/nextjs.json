@@ -121,6 +121,10 @@
     "next-userouter": {
         "prefix": "next-router",
         "body": [
+            "'use client';",
+            "",
+            "import { useRouter } from 'next/navigation';",
+            "",
             "const router = useRouter();",
             "// router.push('/dashboard');"
         ],
@@ -129,6 +133,10 @@
     "next-usepathname": {
         "prefix": "next-pathname",
         "body": [
+            "'use client';",
+            "",
+            "import { usePathname } from 'next/navigation';",
+            "",
             "const pathname = usePathname();",
             "// console.log(pathname);"
         ],
@@ -137,6 +145,10 @@
     "next-usesearchparams": {
         "prefix": "next-searchparams",
         "body": [
+            "'use client';",
+            "",
+            "import { useSearchParams } from 'next/navigation';",
+            "",
             "const searchParams = useSearchParams();",
             "const value = searchParams.get('$1');"
         ],
@@ -145,6 +157,10 @@
     "next-useparams": {
         "prefix": "next-params",
         "body": [
+            "'use client';",
+            "",
+            "import { useParams } from 'next/navigation';",
+            "",
             "const params = useParams();",
             "// console.log(params);"
         ],
@@ -153,6 +169,10 @@
     "next-uselayoutsegments": {
         "prefix": "next-layoutsegments",
         "body": [
+            "'use client';",
+            "",
+            "import { useSelectedLayoutSegments } from 'next/navigation';",
+            "",
             "const segments = useSelectedLayoutSegments();",
             "// console.log(segments);"
         ],
@@ -161,9 +181,116 @@
     "next-uselayoutsegment": {
         "prefix": "next-layoutsegment",
         "body": [
+            "'use client';",
+            "",
+            "import { useSelectedLayoutSegment } from 'next/navigation';",
+            "",
             "const segment = useSelectedLayoutSegment();",
             "// console.log(segment);"
         ],
         "description": "Next.js 15 — useSelectedLayoutSegment() (current segment)"
+    }
+    ,
+    "next-layout": {
+        "prefix": "next-layout",
+        "body": [
+            "import React from 'react';",
+            "",
+            "export default function RootLayout({ children }) {",
+            "    return (",
+            "        <html lang=\"en\">",
+            "            <body>",
+            "                {children}",
+            "            </body>",
+            "        </html>",
+            "    );",
+            "}"
+        ],
+        "description": "Next.js 15 — layout.tsx root layout"
+    },
+    "next-notfound": {
+        "prefix": "next-notfound",
+        "body": [
+            "export default function NotFound() {",
+            "    return (",
+            "        <div>",
+            "            <h2>Not Found</h2>",
+            "            <p>Could not find requested resource</p>",
+            "        </div>",
+            "    );",
+            "}"
+        ],
+        "description": "Next.js 15 — not-found.tsx page"
+    },
+    "next-metadata": {
+        "prefix": "next-metadata",
+        "body": [
+            "import type { Metadata } from 'next';",
+            "",
+            "export const metadata: Metadata = {",
+            "    title: '$1',",
+            "    description: '$2'",
+            "};"
+        ],
+        "description": "Next.js 15 — export page metadata (TypeScript)"
+    },
+    "next-revalidate": {
+        "prefix": "next-revalidate",
+        "body": [
+            "export const revalidate = $1; // seconds"
+        ],
+        "description": "Next.js 15 — route segment revalidation interval"
+    },
+    "next-link": {
+        "prefix": "next-link",
+        "body": [
+            "import Link from 'next/link';",
+            "",
+            "<Link href=\"$1\">$2</Link>"
+        ],
+        "description": "Next.js 15 — Link component usage"
+    },
+    "next-image": {
+        "prefix": "next-image",
+        "body": [
+            "import Image from 'next/image';",
+            "",
+            "<Image src=\"$1\" alt=\"$2\" width={$3} height={$4} />"
+        ],
+        "description": "Next.js 15 — Image component usage"
+    },
+    "next-dynamic": {
+        "prefix": "next-dynamic",
+        "body": [
+            "'use client';",
+            "",
+            "import dynamic from 'next/dynamic';",
+            "",
+            "const $1 = dynamic(() => import('$2'), {",
+            "    ssr: false",
+            "});"
+        ],
+        "description": "Next.js 15 — dynamic() client-side only import"
+    },
+    "next-redirect": {
+        "prefix": "next-redirect",
+        "body": [
+            "import { redirect, notFound } from 'next/navigation';",
+            "",
+            "// redirect('/login');",
+            "// notFound();"
+        ],
+        "description": "Next.js 15 — redirect and notFound utilities"
+    },
+    "next-fetch-cache": {
+        "prefix": "next-fetch",
+        "body": [
+            "const res = await fetch('$1', {",
+            "    cache: '$2', // 'force-cache' | 'no-store'",
+            "    next: { revalidate: $3, tags: ['$4'] }",
+            "});",
+            "const data = await res.json();"
+        ],
+        "description": "Next.js 15 — fetch with cache and revalidate options"
     }
 }

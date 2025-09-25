@@ -21,8 +21,10 @@ Snippets are grouped for clarity:
 | `next-client`   | Create a Client Component with `'use client'`        |
 | `next-server`   | Create a Server Component (async/await)              |
 | `next-page`     | Generate a basic `page.tsx` component                |
+| `next-layout`   | Generate a basic `layout.tsx` root layout            |
 | `next-loading`  | Create a `loading.tsx` file for suspense fallback    |
 | `next-error`    | Create an `error.tsx` file for client error handling |
+| `next-notfound` | Create a `not-found.tsx` page                        |
 
 ---
 
@@ -33,6 +35,9 @@ Snippets are grouped for clarity:
 | `next-action`   | Create a Server Action (`'use server'`)              |
 | `next-handler`  | Create Route Handlers (`GET`, `POST`) for API routes |
 | `next-middleware` | Create Middleware with route matchers              |
+| `next-metadata` | Export `metadata` for pages/layouts (TS)             |
+| `next-revalidate` | Export `revalidate` for ISR                        |
+| `next-redirect` | Utilities for `redirect()` / `notFound()`            |
 
 ---
 
@@ -49,15 +54,26 @@ Snippets are grouped for clarity:
 
 ---
 
+### 🧩 UI Components
+
+| Prefix         | Description                                |
+|----------------|--------------------------------------------|
+| `next-link`    | Import and use Next.js `Link`               |
+| `next-image`   | Import and use optimized `Image`            |
+| `next-dynamic` | Use `dynamic()` for client-only components  |
+
+---
+
 ---
 
 ## 🚀 Features
 
 - ✨ Built specifically for **Next.js 15 App Router**
 - 💡 Covers both **Client** and **Server** Components
-- 🧠 Provides helpers for routing, layout segments, and hooks
-- ✅ Supports both **TypeScript** and **JavaScript**
-- ⚡ Extremely minimal, fast, and dev-friendly
+- 🧠 Helpers for routing, metadata, ISR, and middleware
+- 🔁 Snippets include correct imports and `'use client'` where needed
+- ✅ Supports both **TypeScript** and **JavaScript** (React/TSX/JSX/TS/JS)
+- ⚡ Minimal, fast, and dev-friendly
 
 ---
 

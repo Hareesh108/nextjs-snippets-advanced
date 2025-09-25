@@ -35,6 +35,14 @@
       {
         "language": "typescriptreact",
         "path": "./snippets/nextjs.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nextjs.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/nextjs.json"
       }
     ]
   },
