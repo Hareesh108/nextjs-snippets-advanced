@@ -18,7 +18,7 @@ echo "Validating project..."
 npm test --silent || true
 
 echo "Packaging VSIX..."
-npx --yes vsce package --no-dependencies --allow-star-activation --baseImagesUrl images || {
+npx --yes vsce package --no-dependencies --allow-star-activation || {
   echo "vsce not available via npx or packaging failed. Install with: npm i -g @vscode/vsce" >&2
   exit 1
 }
@@ -31,19 +31,37 @@ fi
 echo "Built: $VSIX_FILE"
 
 VSCE_PAT_VAR="${VSCE_PAT:-${VSCE_TOKEN:-}}"
-if [[ -n "${VSCE_PAT_VAR}" ]]; then
-  echo "Publishing to VS Code Marketplace..."
-  npx --yes vsce publish --pat "$VSCE_PAT_VAR"
+echo "Publishing to VS Code Marketplace..."
+if npx --yes vsce publish; then
+  echo "VS Code Marketplace publish succeeded."
 else
-  echo "VSCE_TOKEN not set; skipping VS Code Marketplace publish."
+  if [[ -n "${VSCE_PAT_VAR}" ]]; then
+    echo "Retrying VS Code publish with PAT..."
+    npx --yes vsce publish --pat "$VSCE_PAT_VAR" || {
+      echo "VS Code publish failed. Ensure you're logged in (npx vsce login <publisher>) or set VSCE_PAT." >&2
+      exit 1
+    }
+  else
+    echo "VS Code publish failed. You're likely not logged in. Run: npx vsce login <publisher> or set VSCE_PAT and retry." >&2
+    exit 1
+  fi
 fi
 
 OVSX_PAT_VAR="${OVSX_PAT:-${OVSX_TOKEN:-}}"
-if [[ -n "${OVSX_PAT_VAR}" ]]; then
-  echo "Publishing to Open VSX..."
-  npx --yes ovsx publish "$VSIX_FILE" --pat "$OVSX_PAT_VAR"
+echo "Publishing to Open VSX..."
+if npx --yes ovsx publish "$VSIX_FILE"; then
+  echo "Open VSX publish succeeded."
 else
-  echo "OVSX_TOKEN not set; skipping Open VSX publish."
+  if [[ -n "${OVSX_PAT_VAR}" ]]; then
+    echo "Retrying Open VSX publish with PAT..."
+    npx --yes ovsx publish "$VSIX_FILE" --pat "$OVSX_PAT_VAR" || {
+      echo "Open VSX publish failed. Ensure you're logged in (npx ovsx login) or set OVSX_PAT." >&2
+      exit 1
+    }
+  else
+    echo "Open VSX publish failed. You're likely not logged in. Run: npx ovsx login or set OVSX_PAT and retry." >&2
+    exit 1
+  fi
 fi
 
 echo "Done."

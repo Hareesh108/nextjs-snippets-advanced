@@ -2,7 +2,7 @@
   "name": "next-js-snippets-latest",
   "displayName": "Nextjs Snippets Advanced",
   "description": "Snippets for Next.js 15 apps with App Router, Server Actions, and more.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "HareeshBhittam",
   "license": "MIT",
   "engines": {
@@ -55,9 +55,8 @@
   ]
   ,
   "scripts": {
-    "test": "node scripts/validate.js"
-    ,
-    "package": "npx vsce package --no-dependencies --allow-star-activation --baseImagesUrl images",
+    "test": "node scripts/validate.js",
+    "package": "npx vsce package --no-dependencies --allow-star-activation",
     "publish:vscode": "npx vsce publish",
     "publish:ovsx": "npx ovsx publish $(ls -t *.vsix | head -n 1)",
     "deploy": "bash scripts/deploy.sh"
