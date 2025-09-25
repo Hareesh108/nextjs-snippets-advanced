@@ -53,4 +53,8 @@
   "recommendations": [
     "HareeshBhittam.reactcraft-snippets"
   ]
+  ,
+  "scripts": {
+    "test": "node scripts/validate.js"
+  }
 }
