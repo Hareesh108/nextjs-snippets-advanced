@@ -75,6 +75,20 @@ function readJson(filePath) {
       if (value.description !== undefined && typeof value.description !== 'string') {
         fail(`Snippet "${name}" description must be a string when provided`);
       }
+
+      // Enforce import-only vs use-only conventions for navigation helper variants
+      if (name.endsWith('-import')) {
+        const nonImport = value.body.find((line) => line.trim() && !line.trim().startsWith('import '));
+        if (nonImport) {
+          fail(`Import-only snippet should only contain import lines: ${name}`);
+        }
+      }
+      if (name.endsWith('-use')) {
+        const hasImport = value.body.find((line) => line.trim().startsWith('import '));
+        if (hasImport) {
+          fail(`Usage-only snippet should not contain imports: ${name}`);
+        }
+      }
     }
   }
 

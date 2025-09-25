@@ -56,6 +56,17 @@ Snippets are grouped for clarity:
 | `next-layoutsegments`| Use `useSelectedLayoutSegments()` for nesting     |
 | `next-layoutsegment` | Use `useSelectedLayoutSegment()` for one segment  |
 
+#### Import-only and Use-only Variants
+
+- `next-router-import` / `next-router-use`
+- `next-pathname-import` / `next-pathname-use`
+- `next-searchparams-import` / `next-searchparams-use`
+- `next-params-import` / `next-params-use`
+- `next-layoutsegments-import` / `next-layoutsegments-use`
+- `next-layoutsegment-import` / `next-layoutsegment-use`
+
+Guidance: add imports at the very top of the file, keep usages inline where needed. If your file already contains many imports, the import-only snippets help you avoid duplications and keep ordering clean.
+
 ---
 
 ### 🧩 UI Components

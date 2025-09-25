@@ -378,4 +378,95 @@
         ],
         "description": "Next.js 15 — OG image route (app/og/route.ts)"
     }
+    ,
+    "next-userouter-import": {
+        "prefix": "next-router-import",
+        "body": [
+            "import { useRouter } from 'next/navigation';"
+        ],
+        "description": "Next.js 15 — import only: useRouter from next/navigation"
+    },
+    "next-userouter-use": {
+        "prefix": "next-router-use",
+        "body": [
+            "const router = useRouter();",
+            "// router.push('/dashboard');"
+        ],
+        "description": "Next.js 15 — usage only: const router = useRouter()"
+    },
+    "next-usepathname-import": {
+        "prefix": "next-pathname-import",
+        "body": [
+            "import { usePathname } from 'next/navigation';"
+        ],
+        "description": "Next.js 15 — import only: usePathname from next/navigation"
+    },
+    "next-usepathname-use": {
+        "prefix": "next-pathname-use",
+        "body": [
+            "const pathname = usePathname();",
+            "// console.log(pathname);"
+        ],
+        "description": "Next.js 15 — usage only: const pathname = usePathname()"
+    },
+    "next-usesearchparams-import": {
+        "prefix": "next-searchparams-import",
+        "body": [
+            "import { useSearchParams } from 'next/navigation';"
+        ],
+        "description": "Next.js 15 — import only: useSearchParams from next/navigation"
+    },
+    "next-usesearchparams-use": {
+        "prefix": "next-searchparams-use",
+        "body": [
+            "const searchParams = useSearchParams();",
+            "const value = searchParams.get('$1');"
+        ],
+        "description": "Next.js 15 — usage only: const searchParams = useSearchParams()"
+    },
+    "next-useparams-import": {
+        "prefix": "next-params-import",
+        "body": [
+            "import { useParams } from 'next/navigation';"
+        ],
+        "description": "Next.js 15 — import only: useParams from next/navigation"
+    },
+    "next-useparams-use": {
+        "prefix": "next-params-use",
+        "body": [
+            "const params = useParams();",
+            "// console.log(params);"
+        ],
+        "description": "Next.js 15 — usage only: const params = useParams()"
+    },
+    "next-uselayoutsegments-import": {
+        "prefix": "next-layoutsegments-import",
+        "body": [
+            "import { useSelectedLayoutSegments } from 'next/navigation';"
+        ],
+        "description": "Next.js 15 — import only: useSelectedLayoutSegments from next/navigation"
+    },
+    "next-uselayoutsegments-use": {
+        "prefix": "next-layoutsegments-use",
+        "body": [
+            "const segments = useSelectedLayoutSegments();",
+            "// console.log(segments);"
+        ],
+        "description": "Next.js 15 — usage only: const segments = useSelectedLayoutSegments()"
+    },
+    "next-uselayoutsegment-import": {
+        "prefix": "next-layoutsegment-import",
+        "body": [
+            "import { useSelectedLayoutSegment } from 'next/navigation';"
+        ],
+        "description": "Next.js 15 — import only: useSelectedLayoutSegment from next/navigation"
+    },
+    "next-uselayoutsegment-use": {
+        "prefix": "next-layoutsegment-use",
+        "body": [
+            "const segment = useSelectedLayoutSegment();",
+            "// console.log(segment);"
+        ],
+        "description": "Next.js 15 — usage only: const segment = useSelectedLayoutSegment()"
+    }
 }
