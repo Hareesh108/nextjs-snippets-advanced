@@ -38,6 +38,10 @@ Snippets are grouped for clarity:
 | `next-metadata` | Export `metadata` for pages/layouts (TS)             |
 | `next-revalidate` | Export `revalidate` for ISR                        |
 | `next-redirect` | Utilities for `redirect()` / `notFound()`            |
+| `next-segment`  | Export `dynamic`, `revalidate`, `fetchCache`, etc.   |
+| `next-generate-metadata` | `generateMetadata()` function               |
+| `next-generate-params`   | `generateStaticParams()` for dynamic routes |
+| `next-server-utils`      | `revalidatePath/Tag`, `cookies`, `headers`  |
 
 ---
 
@@ -61,6 +65,8 @@ Snippets are grouped for clarity:
 | `next-link`    | Import and use Next.js `Link`               |
 | `next-image`   | Import and use optimized `Image`            |
 | `next-dynamic` | Use `dynamic()` for client-only components  |
+| `next-script`  | Use `Script` with loading strategies        |
+| `next-og-image`| Create an OG image route (edge)            |
 
 ---
 
